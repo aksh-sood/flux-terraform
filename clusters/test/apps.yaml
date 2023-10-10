@@ -6,10 +6,10 @@ metadata:
 spec:
   interval: 1m
   approvePlan: "auto"
-  path: ./base/terraform/ec2
+  path: .
   storeReadablePlan: human
-  backendConfig:
-    disable: true
+  # backendConfig:
+  #   disable: true
   # cliConfigSecretRef:
   #   name: tfe-cli-config
   sourceRef:
