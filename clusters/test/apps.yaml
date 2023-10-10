@@ -1,7 +1,7 @@
 apiVersion: infra.contrib.fluxcd.io/v1alpha1
 kind: Terraform
 metadata:
-  name: ec2-setup
+  name: s3-setup
   namespace: flux-system
 spec:
   interval: 1m
