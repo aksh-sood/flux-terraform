@@ -3,12 +3,13 @@ provider "aws" {
 }
 
 resource "aws_instance" "example" {
+    count=2
   ami           = "ami-067d1e60475437da2"
   instance_type = "t2.micro"
   subnet_id = "subnet-03e317140cf1b1fdc"
   tags ={
     Name="Aksh Flux"
-    Flux="drift from git part 2"
+    Flux="drift from git part 3"
   }
 }
 

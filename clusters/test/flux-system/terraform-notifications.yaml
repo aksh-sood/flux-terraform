@@ -6,7 +6,7 @@ metadata:
   namespace: flux-system
 spec:
   type: slack
-  channel: terraform-test-alerts
+  channel: flux-terraform
   secretRef:
     name: slack-webhook
 ---
