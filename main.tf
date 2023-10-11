@@ -8,8 +8,7 @@ resource "aws_instance" "example" {
   instance_type = "t2.micro"
   subnet_id = "subnet-03e317140cf1b1fdc"
   tags ={
-    Name="Aksh Flux"
-    Flux="drift from git part 3"
+    Name="Aksh Flux-${count.index}"
   }
 }
 
