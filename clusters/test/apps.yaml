@@ -19,7 +19,7 @@ metadata:
   name: weave-gitops-enterprise
   namespace: flux-system
 spec:
-  interval: 10m0s
+  interval: 10s
   sourceRef:
     kind: GitRepository
     name: flux-system
