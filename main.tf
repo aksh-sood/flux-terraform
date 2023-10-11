@@ -8,7 +8,7 @@ resource "aws_instance" "example" {
   subnet_id = "subnet-03e317140cf1b1fdc"
   tags ={
     Name="Aksh Flux"
-    Flux="drift from git"
+    Flux="drift from git part 2"
   }
 }
 
