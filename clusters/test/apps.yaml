@@ -34,7 +34,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m
-  approvePlan: ""
+  approvePlan: "plan-main-670288404e"
   path: ./
   storeReadablePlan: human
   # backendConfig:
