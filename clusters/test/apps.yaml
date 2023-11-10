@@ -1,47 +1,47 @@
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-kind: Kustomization
-metadata:
-  name: apps
-  namespace: flux-system
-spec:
-  interval: 10m0s
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-  path: ./base/apps
-  prune: true
-  validation: client
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-kind: Kustomization
-metadata:
-  name: weave-gitops-enterprise
-  namespace: flux-system
-spec:
-  interval: 10s
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-  path: ./wego
-  prune: true
-  validation: client
----
-apiVersion: infra.contrib.fluxcd.io/v1alpha1
-kind: Terraform
-metadata:
-  name: ec2-setup
-  namespace: flux-system
-spec:
-  interval: 1m
-  approvePlan: "auto"
-  path: ./
-  storeReadablePlan: human
-  # backendConfig:
-  #   disable: true
-  # cliConfigSecretRef:
-  #   name: tfe-cli-config
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-    namespace: flux-system
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+# kind: Kustomization
+# metadata:
+#   name: apps
+#   namespace: flux-system
+# spec:
+#   interval: 10m0s
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
+#   path: ./base/apps
+#   prune: true
+#   validation: client
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+# kind: Kustomization
+# metadata:
+#   name: weave-gitops-enterprise
+#   namespace: flux-system
+# spec:
+#   interval: 10s
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
+#   path: ./wego
+#   prune: true
+#   validation: client
+# ---
+# apiVersion: infra.contrib.fluxcd.io/v1alpha1
+# kind: Terraform
+# metadata:
+#   name: ec2-setup
+#   namespace: flux-system
+# spec:
+#   interval: 1m
+#   approvePlan: "auto"
+#   path: ./
+#   storeReadablePlan: human
+#   # backendConfig:
+#   #   disable: true
+#   # cliConfigSecretRef:
+#   #   name: tfe-cli-config
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
+#     namespace: flux-system

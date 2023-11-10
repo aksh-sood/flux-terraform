@@ -6,7 +6,7 @@ resource "aws_instance" "example" {
     count=2
   ami           = "ami-067d1e60475437da2"
   instance_type = "t2.micro"
-  subnet_id = "subnet-03e317140cf1b1fdc"
+  subnet_id = "subnet-0a39425a7e9257475"
   tags ={
     Name="Aksh Flux-${count.index}"
   }
